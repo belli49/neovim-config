@@ -13,14 +13,6 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use ({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
@@ -29,10 +21,8 @@ return require('packer').startup(function(use)
   use('xiyaowong/transparent.nvim')
   use('nvim-tree/nvim-tree.lua')
 
-
   -- tabline plugin
   -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-  use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
   use 'romgrk/barbar.nvim'
 
@@ -40,7 +30,8 @@ return require('packer').startup(function(use)
   use("Hitesh-Aggarwal/feline_one_monokai.nvim")
   use 'nvim-tree/nvim-web-devicons'
 
-  use { "catppuccin/nvim", as = "catppuccin" }
+  -- color theme
+  use('rose-pine/neovim')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
