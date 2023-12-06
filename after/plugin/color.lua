@@ -1,3 +1,23 @@
+-- Transparent-nvim
+require("transparent").setup({ -- Optional, you don't have to run setup.
+  groups = { -- table: default groups
+    'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+    'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+    'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+    'SignColumn','StatusLine', 'StatusLineNC',
+    'EndOfBuffer',
+  },
+  extra_groups = {}, -- table: additional groups that should be cleared
+  exclude_groups = {
+    'StatusLineNC', 'CursorLine', 'CursorLineNr',
+  }, -- table: groups you don't want to clear
+})
+
+vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "ExtraGroup" })
+-- vimscript: let g:transparent_groups = extend(get(g:, 'transparent_groups', []), ["ExtraGroup"])
+
+
+-- Rose-pine colorscheme
 require('rose-pine').setup({
 	--- @usage 'auto'|'main'|'moon'|'dawn'
 	variant = 'auto',
@@ -43,7 +63,7 @@ require('rose-pine').setup({
 		ColorColumn = { bg = 'rose' },
 
 		-- Blend colours against the "base" background
-		CursorLine = { bg = 'foam', blend = 10 },
+		CursorLine = { bg = 'rose', blend = 10 },
 		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
 
 		-- By default each group adds to the existing config.
