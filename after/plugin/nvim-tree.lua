@@ -37,7 +37,10 @@ local function my_on_attach(bufnr)
     -- custom mappings
     vim.keymap.set('n', '<leader>pv', '<cmd>NvimTreeFocus<CR>')
     vim.keymap.set('n', '<leader>ft', '<cmd>NvimTreeToggle<CR>')
+    vim.keymap.set('n', '<leader>fh', '<cmd>NvimTreeFindFile<CR>')
+    vim.keymap.set('n', '<C-r>', '<cmd>NvimTreeRefresh<CR>', { silent = true, buffer = bufnr })
 end
+
 
 -- pass to setup along with your other options
 require("nvim-tree").setup {
