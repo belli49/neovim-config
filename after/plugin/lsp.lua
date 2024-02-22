@@ -6,4 +6,4 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-lsp_zero.setup_servers({'lua_ls', 'clangd'})
+lsp_zero.setup_servers({'lua_ls', 'clangd', 'rust_analyzer'})

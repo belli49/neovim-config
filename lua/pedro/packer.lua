@@ -26,6 +26,9 @@ return require('packer').startup(function(use)
   use('xiyaowong/transparent.nvim')
   use('nvim-tree/nvim-tree.lua')
 
+  -- tmux
+  use('alexghergh/nvim-tmux-navigation')
+
   -- tabline plugin
   -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
