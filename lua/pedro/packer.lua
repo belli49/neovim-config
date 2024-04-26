@@ -38,6 +38,21 @@ return require('packer').startup(function(use)
   use("Hitesh-Aggarwal/feline_one_monokai.nvim")
   use 'nvim-tree/nvim-web-devicons'
 
+  -- Navigation
+  use {
+    "SmiteshP/nvim-navbuddy",
+    requires = {
+        "neovim/nvim-lspconfig",
+        "SmiteshP/nvim-navic",
+        "MunifTanjim/nui.nvim",
+        "numToStr/Comment.nvim",        -- Optional
+        "nvim-telescope/telescope.nvim" -- Optional
+    }
+  }
+
+  -- Folding
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
   -- color theme
   use('rose-pine/neovim')
 
