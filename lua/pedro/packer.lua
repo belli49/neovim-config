@@ -25,6 +25,8 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('xiyaowong/transparent.nvim')
   use('nvim-tree/nvim-tree.lua')
+  use('tpope/vim-surround')
+  use('lukas-reineke/indent-blankline.nvim')
 
   -- tmux
   use('alexghergh/nvim-tmux-navigation')
@@ -51,7 +53,7 @@ return require('packer').startup(function(use)
   }
 
   -- Folding
-  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+  -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- color theme
   use('rose-pine/neovim')
