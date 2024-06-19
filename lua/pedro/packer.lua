@@ -13,11 +13,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-  }
-
+  use('jiangmiao/auto-pairs')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
@@ -25,8 +21,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('xiyaowong/transparent.nvim')
   use('nvim-tree/nvim-tree.lua')
-  use('tpope/vim-surround')
-  use('lukas-reineke/indent-blankline.nvim')
+  use('easymotion/vim-easymotion')
 
   -- tmux
   use('alexghergh/nvim-tmux-navigation')
@@ -39,21 +34,6 @@ return require('packer').startup(function(use)
   use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
   use("Hitesh-Aggarwal/feline_one_monokai.nvim")
   use 'nvim-tree/nvim-web-devicons'
-
-  -- Navigation
-  use {
-    "SmiteshP/nvim-navbuddy",
-    requires = {
-        "neovim/nvim-lspconfig",
-        "SmiteshP/nvim-navic",
-        "MunifTanjim/nui.nvim",
-        "numToStr/Comment.nvim",        -- Optional
-        "nvim-telescope/telescope.nvim" -- Optional
-    }
-  }
-
-  -- Folding
-  -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- color theme
   use('rose-pine/neovim')
