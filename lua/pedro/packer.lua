@@ -21,7 +21,8 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('xiyaowong/transparent.nvim')
   use('nvim-tree/nvim-tree.lua')
-  use('easymotion/vim-easymotion')
+  use('ggandor/leap.nvim')
+  use('lukas-reineke/indent-blankline.nvim')
 
   -- tmux
   use('alexghergh/nvim-tmux-navigation')
@@ -54,5 +55,28 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
+
+  -- navbuddy
+  use {
+    "SmiteshP/nvim-navbuddy",
+    requires = {
+        "neovim/nvim-lspconfig",
+        "SmiteshP/nvim-navic",
+        "MunifTanjim/nui.nvim",
+        "numToStr/Comment.nvim",        -- Optional
+        "nvim-telescope/telescope.nvim" -- Optional
+    }
+  }
+
+  -- vim surround
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
 
 end)
